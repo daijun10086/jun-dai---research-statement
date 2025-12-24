@@ -12,16 +12,16 @@ const CONFIG = {
     website: "https://daijun10086.github.io/",
   },
   logos: {
-    zju: "assets/logos/zju-logo.png",     // 替换为您下载的浙大图标
-    huawei: "assets/logos/huawei-logo.png", // 替换为华为图标
-    shlab: "assets/logos/ai-lab-logo.png",   // 替换为上海人工智能实验室图标
-    ur: "assets/logos/UR-logo.png",         // 替换为罗切斯特大学图标
-    tju: "assets/logos/tju-logo.png",       // 替换为天津大学图标
+    zju: "/jun-dai---research-statement/assets/logos/zju-logo.png",
+    huawei: "/jun-dai---research-statement/assets/logos/huawei-logo.png",
+    shlab: "/jun-dai---research-statement/assets/logos/ai-lab-logo.png",
+    ur: "/jun-dai---research-statement/assets/logos/UR-logo.png",
+    tju: "/jun-dai---research-statement/assets/logos/tju-logo.png",
   },
   figures: {
-    visualComputing: "assets/images/visual_computing_new.png",
-    unControllability: "assets/images/un-contralability.png",
-    generativeAdaptation: "assets/images/generative-adaption-new.png",
+    visualComputing: "/jun-dai---research-statement/assets/images/visual_computing_new.png",
+    unControllability: "/jun-dai---research-statement/assets/images/un-contralability.png",
+    generativeAdaptation: "/jun-dai---research-statement/assets/images/generative-adaption-new.png",
   }
 };
 
@@ -212,7 +212,7 @@ const App: React.FC = () => {
         <div className="max-w-3xl mx-auto px-6">
           <p className="academic-p first-letter:text-7xl first-letter:font-black first-letter:mr-4 first-letter:float-left first-letter:text-stone-900 first-letter:mt-2 first-letter:serif">Visual computing is a profound multidisciplinary field that essentially explores how to efficiently acquire the maximum amount of useful visual information, transmit it through compact modules, and infer the intrinsic properties of the objective world. At its core, this process mirrors one of the most fundamental ways humans and animals interact with and learn from their environment.</p>
           <p className="academic-p">Historically, the classical computer vision paradigm has predominantly focused on information extraction. Researchers sought to empower machines with human-like perception by distilling physical laws from sensor-acquired data. However, for a long period, the community’s focus remained less on the information acquisition process itself. While we initially attempted to mimic the biological eye when designing cameras, inherent manufacturing complexities and power constraints made it difficult to achieve a comparable density of information capture.</p>
-          <VisualComputingDiagram />
+          <Figure src={CONFIG.figures.visualComputing} caption="Figure 1: The overall pipeline and concept of visual computing. Visual information will be captured, transported, processed, extracted and finally utilized to infer properties of the physical world." />
           <p className="academic-p">This bottleneck gave rise to computational imaging and photography, which demonstrated that co-designing physical acquisition devices for specific tasks could capture significantly more informative data, thereby drastically reducing the difficulty of downstream inference. This evolution underscored a vital principle: richer information acquisition is the prerequisite for more efficient processing.</p>
           <p className="academic-p">Despite the success of hardware-software co-design in tasks like depth sensing and hyperspectral imaging, a significant challenge remains: the lack of generalization. Designing bespoke physical hardware for every unique visual task is prohibitively expensive and lacks cross-domain flexibility. To overcome this, I propose that <strong>Deep Generative Models (DGMs)</strong> represent a transformative, universal, and highly generalizable "Information Engine." By learning the high-dimensional distributions of visual data, DGMs internalize the intrinsic properties of the world—such as lighting, geometry, and semantics—which can serve as a "virtual information source" to supplement physical sensors.</p>
           <p className="academic-p">In my research, I aim to explore how to accurately extract task-specific information from pre-trained generative models and how to design next-generation generative frameworks that provide greater "information gain" for visual computing. I am firmly convinced that this paradigm will not only catalyze a leap forward in visual perception but also provide new insights for broader scientific disciplines, ultimately driving profound societal progress.</p>
