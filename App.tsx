@@ -294,7 +294,7 @@ const App: React.FC = () => {
           </div>
         </Section>
 
-        <Section id="references" title="Selected References">
+        <Section id="references" title="References">
           <div className="space-y-10 academic-p text-[1.05rem] serif">
             {[
               { id: 1, text: "Dai, J., Dong, X., Li, C., and He, J.-J. (2023). \"On-chip 4F-system based on concave mirrors for optical neural networks.\" Holography, Diffractive Optics, and Applications XIII. SPIE." },
