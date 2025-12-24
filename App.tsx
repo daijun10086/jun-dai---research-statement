@@ -12,10 +12,11 @@ const CONFIG = {
     website: "https://daijun10086.github.io/",
   },
   logos: {
-    zju: "assets/logos/zju.png",     // 替换为您下载的浙大图标
-    huawei: "assets/logos/huawei.png", // 替换为华为图标
-    shlab: "assets/logos/shlab.png",   // 替换为上海人工智能实验室图标
-    ur: "assets/logos/ur.png",         // 替换为罗切斯特大学图标
+    zju: "assets/logos/zju-logo.png",     // 替换为您下载的浙大图标
+    huawei: "assets/logos/huawei-logo.png", // 替换为华为图标
+    shlab: "assets/logos/ai-lab-logo.png",   // 替换为上海人工智能实验室图标
+    ur: "assets/logos/UR-logo.png",         // 替换为罗切斯特大学图标
+    tju: "assets/logos/tju-logo.png",       // 替换为天津大学图标
   },
   figures: {
     visualComputing: "assets/images/visual_computing_new.png",
@@ -196,6 +197,7 @@ const App: React.FC = () => {
             <div className="flex flex-col items-center gap-10">
               <div className="flex items-center gap-4"><span className="h-px w-16 bg-stone-100"></span><span className="sans text-sm text-stone-400 tracking-[0.4em] uppercase font-black">University of Rochester</span><span className="h-px w-16 bg-stone-100"></span></div>
               <div className="flex items-center justify-center gap-10 md:gap-16 py-8 px-12 md:px-20 bg-stone-50/40 border border-stone-100 rounded-full shadow-inner backdrop-blur-md">
+                <AffiliationLogo src={CONFIG.logos.tju} fallback={<Landmark size={48} />} title="Tianjin University" label="TJU" />
                 <AffiliationLogo src={CONFIG.logos.zju} fallback={<Landmark size={48} />} title="Zhejiang University" label="ZJU" />
                 <AffiliationLogo src={CONFIG.logos.huawei} fallback={<Briefcase size={48} />} title="Huawei" label="Huawei" />
                 <AffiliationLogo src={CONFIG.logos.shlab} fallback={<Building2 size={48} />} title="Shanghai AI Laboratory" label="SH Lab" />
