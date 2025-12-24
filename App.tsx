@@ -21,7 +21,7 @@ const CONFIG = {
   figures: {
     visualComputing: "assets/images/visual_computing_new.png",
     unControllability: "assets/images/un-contralability.png",
-    generativeAdaptation: "assets/images/generative-adaption.png",
+    generativeAdaptation: "assets/images/generative-adaption-new.png",
   }
 };
 
