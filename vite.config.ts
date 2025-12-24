@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/research-statement/', // 设置为你的仓库名
+      base: '/jun-dai---research-statement/', // 设置为你的仓库名
       server: {
         port: 3000,
         host: '0.0.0.0',
