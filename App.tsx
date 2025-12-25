@@ -177,10 +177,24 @@ const Figure: React.FC<{ src: string; caption: string; alt?: string }> = ({ src,
 
 const App: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 400);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Trigger KaTeX rendering after component mounts
+  useEffect(() => {
+    if ((window as any).renderMathInElement) {
+      (window as any).renderMathInElement(document.body, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ],
+        throwOnError: false
+      });
+    }
   }, []);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
